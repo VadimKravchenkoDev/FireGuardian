@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.compilerKsp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -9,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.kravchenkovadim.fireguardian"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -50,6 +52,19 @@ android {
 }
 
 dependencies {
+    //Room
+    implementation(libs.androidx.room)
+    ksp(libs.androidx.room.ksp)
+    //Dagger hilt
+    implementation(libs.androidx.hilt)
+    ksp(libs.androidx.hilt.ksp)
+    implementation(libs.androidx.dagger)
+    ksp(libs.androidx.dagger.ksp)
+    //Data store
+    implementation(libs.androidx.datastore)
+    //Compose dependencies
+    implementation(libs.androidx.viewmodel)
+    implementation(libs.androidx.navigation)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
