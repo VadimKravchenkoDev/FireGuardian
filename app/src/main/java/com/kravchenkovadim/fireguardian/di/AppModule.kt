@@ -2,8 +2,8 @@ package com.kravchenkovadim.fireguardian.di
 
 import android.app.Application
 import androidx.room.Room
-import com.kravchenkovadim.fireguardian.data.AddTaskRepoImpl
-import com.kravchenkovadim.fireguardian.data.AddTaskRepository
+import com.kravchenkovadim.fireguardian.data.TaskRepoImpl
+import com.kravchenkovadim.fireguardian.data.TaskRepository
 import com.kravchenkovadim.fireguardian.data.DayListRepoImpl
 import com.kravchenkovadim.fireguardian.data.DayListRepository
 import com.kravchenkovadim.fireguardian.data.MainDb
@@ -36,8 +36,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideAddItemRepo(db : MainDb) : AddTaskRepository{
-        return AddTaskRepoImpl(db.addTaskDao)
+    fun provideAddItemRepo(db : MainDb) : TaskRepository{
+        return TaskRepoImpl(db.taskDao)
     }
 
     @Provides

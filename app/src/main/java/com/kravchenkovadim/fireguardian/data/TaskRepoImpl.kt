@@ -2,10 +2,10 @@ package com.kravchenkovadim.fireguardian.data
 
 import kotlinx.coroutines.flow.Flow
 
-class AddTaskRepoImpl (
-    private val dao : AddTaskDao
-) :AddTaskRepository{
-    override suspend fun insertTask(task: AddTask) {
+class TaskRepoImpl(
+    private val dao: TaskDao
+) : TaskRepository {
+    override suspend fun insertTask(task: Task) {
         dao.insertTask(task)
     }
 
@@ -13,12 +13,12 @@ class AddTaskRepoImpl (
         dao.insertTask(task)
     }
 
-    override suspend fun deleteTask(task: AddTask) {
+    override suspend fun deleteTask(task: Task) {
         dao.deleteTask(task)
     }
 
-    override fun getAllTasksById(taskId: Int): Flow<List<AddTask>> {
-        return dao.getAllTasksById(taskId)
+    override fun getAllTasksById(taskId: Int): Flow<List<Task>> {
+        return dao.observeAllTasksById(taskId)
     }
 
     override suspend fun getListTaskById(taskId: Int): DayListTasks {
