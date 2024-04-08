@@ -3,8 +3,8 @@ package com.kravchenkovadim.fireguardian.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "add_task")
-data class AddTask (
+@Entity(tableName = "task")
+data class Task (
     @PrimaryKey
     val id : Int? = null,
     val name: String,

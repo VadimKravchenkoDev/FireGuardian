@@ -7,15 +7,15 @@ import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
-interface AddTaskDao {
+interface TaskDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTask(item: AddTask)
+    suspend fun insertTask(item: Task)
 
     @Delete
-    suspend fun deleteTask(task: AddTask)
+    suspend fun deleteTask(task: Task)
 
-    @Query("SELECT * FROM add_task WHERE listId = :taskId")
-    fun getAllTasksById(taskId: Int): Flow<List<AddTask>>
+    @Query("SELECT * FROM task WHERE listId = :taskId")
+    fun getAllTasksById(taskId: Int): Flow<List<Task>>
 
     @Query("SELECT * FROM day_list_tasks WHERE id = :taskId")
     suspend fun getListTaskById(taskId: Int): DayListTasks
