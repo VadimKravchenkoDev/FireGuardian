@@ -10,8 +10,8 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kravchenkovadim.fireguardian"
-        minSdk = 24
+        applicationId = "com.kravchenkovadim.shoppinglist"
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -52,19 +52,30 @@ android {
 }
 
 dependencies {
+
     //Room
     implementation(libs.androidx.room)
+
     ksp(libs.androidx.room.ksp)
-    //Dagger hilt
-    implementation(libs.androidx.hilt)
-    ksp(libs.androidx.hilt.ksp)
-    implementation(libs.androidx.dagger)
-    ksp(libs.androidx.dagger.ksp)
     //Data store
     implementation(libs.androidx.datastore)
     //Compose dependencies
     implementation(libs.androidx.viewmodel)
     implementation(libs.androidx.navigation)
+    implementation(libs.androidx.constraintlayout)
+    //Dagger hilt
+    implementation(libs.androidx.hilt.android)
+    ksp(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    ksp(libs.androidx.hilt.navigation.compiler)
+    //Material
+    implementation(libs.androidx.material)
+    //coordinatorlayout
+    implementation(libs.androidx.coordinatorlayout)
+
+    //appcompat
+    implementation(libs.androidx.appcompat)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
