@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.compilerKsp)
     alias(libs.plugins.hilt)
+
 }
 
 android {
@@ -10,7 +11,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kravchenkovadim.shoppinglist"
+        applicationId = "com.kravchenkovadim.fireguardian"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
@@ -37,6 +38,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    kotlin {
+        jvmToolchain(1_8)
     }
     buildFeatures {
         compose = true
