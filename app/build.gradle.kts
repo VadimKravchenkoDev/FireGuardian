@@ -10,7 +10,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kravchenkovadim.shoppinglist"
+        applicationId = "com.kravchenkovadim.fireguardian"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
