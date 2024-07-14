@@ -6,8 +6,10 @@ import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.kravchenkovadim.fireguardian.R
+import com.kravchenkovadim.fireguardian.ui.theme.BlueLight
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -17,10 +19,12 @@ fun MainScreen() {
 
         },
         floatingActionButton = {
-            FloatingActionButton(onClick = { /*TODO*/ }) {
+            FloatingActionButton(onClick = { /*TODO*/ },
+                backgroundColor = BlueLight) {
                 Icon(
                     painter = painterResource(id = R.drawable.add_icon),
-                    contentDescription = "Add"
+                    contentDescription = "Add",
+                    tint = Color.White
                 )
             }
         },
