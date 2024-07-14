@@ -18,13 +18,13 @@ import androidx.core.view.WindowCompat
 private val DarkColorScheme = darkColorScheme(
     primary = BlueLight,
     secondary = BlueLight,
-    tertiary = Pink80
+    tertiary = BlueLight
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = BlueLight,
     secondary = BlueLight,
-    tertiary = Pink40
+    tertiary = BlueLight
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -56,9 +56,6 @@ fun FireGuardianTheme(
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
-            val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
 
