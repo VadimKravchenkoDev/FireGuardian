@@ -14,7 +14,7 @@ import com.kravchenkovadim.fireguardian.main_screen.MainScreen
 import com.kravchenkovadim.fireguardian.ui.theme.FireGuardianTheme
 import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
-class .
+class
 MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
