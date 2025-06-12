@@ -32,3 +32,4 @@ class MainActivity : ComponentActivity() {
 }
 
 //Continue
+fun update(){}
