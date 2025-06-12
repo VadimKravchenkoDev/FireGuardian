@@ -24,7 +24,6 @@ fun MainScreen() {
                 Icon(
                     painter = painterResource(id = R.drawable.add_icon),
                     contentDescription = "Add",
-                    //123
                     tint = Color.White
                 )
             }
